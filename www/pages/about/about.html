@@ -1,0 +1,74 @@
+<ion-app>
+    <ion-page class="show-page">
+      
+      <ion-header color="blue">
+        <ion-toolbar>
+            <ion-buttons slot="start">
+                <ion-menu-button></ion-menu-button>
+            </ion-buttons>
+            
+            <ion-router-outlet id="menu"></ion-router-outlet>
+            <ion-title>Ionic 4 + AngularJS Application </ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+      <ion-menu content-id="menu">
+
+        <ion-header>
+            <ion-toolbar color="danger">
+              <ion-title>End Menu</ion-title>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content>
+            <ion-list>
+              <ion-item><a ui-sref="home" ui-sref-active="active">Home</a></ion-item>
+              <ion-item><a ui-sref="about" ui-sref-active="active">About</a></ion-item>
+              <ion-item>Menu Item</ion-item>
+              <ion-item>Menu Item</ion-item>
+              <ion-item>Menu Item</ion-item>
+            </ion-list>
+          </ion-content>               
+    </ion-menu>
+      <ion-content class="content" padding>
+            <p>This is the about page</p>
+            <a ui-sref="home" ui-sref-active="active">Home</a>
+            <a ui-sref="about" ui-sref-active="active">About</a>
+
+            <!-- Default textarea -->
+<ion-textarea></ion-textarea>
+
+<!-- Textarea in an item with a placeholder -->
+<ion-item>
+  <ion-textarea placeholder="Enter more information here..."></ion-textarea>
+</ion-item>
+
+<!-- Textarea in an item with a floating label -->
+<ion-item>
+  <ion-label position="floating">Description</ion-label>
+  <ion-textarea></ion-textarea>
+</ion-item>
+
+<!-- Disabled and readonly textarea in an item with a stacked label -->
+<ion-item>
+  <ion-label position="stacked">Summary</ion-label>
+  <ion-textarea
+    disabled
+    readonly
+    value="Ionic enables developers to build performant, high-quality mobile apps.">
+  </ion-textarea>
+</ion-item>
+
+<!-- Textarea that clears the value on edit -->
+<ion-item>
+  <ion-label>Comment</ion-label>
+  <ion-textarea clearOnEdit="true"></ion-textarea>
+</ion-item>
+
+<!-- Textarea with custom number of rows and cols -->
+<ion-item>
+  <ion-label>Notes</ion-label>
+  <ion-textarea rows="6" cols="20" placeholder="Enter any notes here..."></ion-textarea>
+</ion-item>
+      </ion-content>
+    </ion-page>
+</ion-app>
